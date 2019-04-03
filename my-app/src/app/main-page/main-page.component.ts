@@ -12,4 +12,8 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  goBack(): void {
+    console.log(45)
+  }
+
 }
