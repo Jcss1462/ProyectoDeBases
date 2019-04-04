@@ -2,56 +2,78 @@
 
     <div id="selectores">
 
-        <form>
-            <input class="chosen-value" type="text" value="" placeholder="Type to filter">
-            <ul class="value-list">
-                <li>Alabama</li>
-                <li>Alaska</li>
-                <li>Arizona</li>
-                <li>Arkansas</li>
-                <li>California</li>
-                <li>Colorado</li>
-                <li>Connecticut</li>
-                <li>Delaware</li>
-                <li>Florida</li>
-                <li>Georgia</li>
-                <li>Hawaii</li>
-            </ul>
-        </form>
+        <!--Genero-->
+        <div class="desplegable">
+            <div id="genero" class="activador" (click)="activarGenero()">
+                Genero
+            </div>
+            <div id="listagenero" class="lista">
 
-        <form>
-            <input class="chosen-value" type="text" value="" placeholder="Type to filter">
-            <ul class="value-list">
-                <li>Alabama</li>
-                <li>Alaska</li>
-                <li>Arizona</li>
-                <li>Arkansas</li>
-                <li>California</li>
-                <li>Colorado</li>
-                <li>Connecticut</li>
-                <li>Delaware</li>
-                <li>Florida</li>
-                <li>Georgia</li>
-                <li>Hawaii</li>
-            </ul>
-        </form>
+                <div id="jaz" class="item">
+                    Jaz
+                </div>
+                <div id="pop" class="item">
+                    Pop
+                </div>
+                <div id="rock" class="item">
+                    Rock
+                </div>
+                <div id="electronica" class="item">
+                    Electronica
+                </div>
+            </div>
+        </div>
 
-        <form>
-            <input class="chosen-value" type="text" value="" placeholder="Type to filter">
-            <ul class="value-list">
-                <li>Alabama</li>
-                <li>Alaska</li>
-                <li>Arizona</li>
-                <li>Arkansas</li>
-                <li>California</li>
-                <li>Colorado</li>
-                <li>Connecticut</li>
-                <li>Delaware</li>
-                <li>Florida</li>
-                <li>Georgia</li>
-                <li>Hawaii</li>
-            </ul>
-        </form>
+        <!--Artistas-->
+        <div class="desplegable">
+            <div id="artistas" class="activador" (click)="activarArtista()">
+                Artistas
+            </div>
+            <div id="listaArista" class="lista">
+
+                <div id="Myley Cyrus" class="item">
+                    Myley Cyrus
+                </div>
+                <div id="Lady Gaga" class="item">
+                    Lady Gaga
+                </div>
+                <div id="Katy Perry" class="item">
+                    Katy Perry
+                </div>
+                <div id="Isabella Monner" class="item">
+                    Isabella Monner
+                </div>
+                <div id="James Maslow" class="item">
+                    James Maslow
+                </div>
+                <div id="Kendal Knight" class="item">
+                    Kendal Knight
+                </div>
+            </div>
+        </div>
+
+        <!--Foto-->
+        <div class="desplegable">
+            <div id="foto" class="activador" (click)="activarFoto()">
+                Foto
+            </div>
+            <div id="listafoto" class="lista foto">
+
+                <div id="Myley Cyrus" class="item">
+                    <img src="../assets/myley.jpg" alt="Foto de Myley cyrus" title="foto artista">
+                </div>
+
+                <div id="Lady Gaga" class="item">
+                    <img src="../assets/lady.jpeg" alt="Foto de Lady Gaga" title="foto artista">
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
 
     </div>
 

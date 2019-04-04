@@ -12,8 +12,23 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  goBack(): void {
-    console.log(45)
+  //activar lista de genero
+  activarGenero(): void {
+    let activador= document.getElementById("listagenero");
+    activador.classList.toggle('active');
   }
+
+  //activar lista de artista
+  activarArtista(): void {
+    let activador= document.getElementById("listaArista");
+    activador.classList.toggle('active');
+  }
+
+  //activar lista de foto
+  activarFoto(): void {
+    let activador= document.getElementById("listafoto");
+    activador.classList.toggle('active');
+  }
+
 
 }
