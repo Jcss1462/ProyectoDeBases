@@ -30,5 +30,7 @@ export class MainPageComponent implements OnInit {
     activador.classList.toggle('active');
   }
 
+  
+
 
 }

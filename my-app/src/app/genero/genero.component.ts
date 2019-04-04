@@ -35,6 +35,7 @@ export class GeneroComponent implements OnInit {
     activador.classList.toggle('active');
   }
 
+  //ir a la pagina anterior
   goBack(): void {
     this.location.back();
   }
