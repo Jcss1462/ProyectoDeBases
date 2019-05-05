@@ -31,24 +31,11 @@
             </div>
             <div id="listaArista" class="lista">
 
-                <div id="Myley Cyrus" class="item">
-                    Myley Cyrus
+                <div *ngFor="let artist of artists" id=artist class=item>
+                   {{artist.nombre}}
                 </div>
-                <div id="Lady Gaga" class="item">
-                    Lady Gaga
-                </div>
-                <div id="Katy Perry" class="item">
-                    Katy Perry
-                </div>
-                <div id="Isabella Monner" class="item">
-                    Isabella Monner
-                </div>
-                <div id="James Maslow" class="item">
-                    James Maslow
-                </div>
-                <div id="Kendal Knight" class="item">
-                    Kendal Knight
-                </div>
+                
+                     
             </div>
         </div>
 

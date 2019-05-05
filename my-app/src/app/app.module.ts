@@ -8,6 +8,12 @@ import { GeneroComponent } from './genero/genero.component';
 import { ArtistaComponent } from './artista/artista.component';
 import { CancionComponent } from './cancion/cancion.component';
 
+//http
+import { HttpClientModule } from '@angular/common/http';
+
+//servicios
+import{ArtistasService} from './servicios/Artistas/artistas.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +24,10 @@ import { CancionComponent } from './cancion/cancion.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ArtistasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

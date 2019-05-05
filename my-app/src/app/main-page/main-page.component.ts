@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+//servicios
+import { Artist } from '../servicios/Artistas/artist';
+import{ArtistasService} from '../servicios/Artistas/artistas.service';
+
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -7,10 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  artists: Artist[];
+
+  constructor(private _Artistas:ArtistasService) { }
 
   ngOnInit() {
+    this._Artistas.getArtists()
+    .subscribe(artists => this.artists = artists);
   }
+
+  
 
   //activar lista de genero
   activarGenero(): void {
