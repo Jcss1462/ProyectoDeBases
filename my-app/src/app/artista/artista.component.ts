@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 //importacion par obtener la ultima pagina visitada
 import { Location } from '@angular/common';
+
+
+//serbicios
+import { Artist } from '../servicios/Artistas/artist';
+import{ArtistasService} from '../servicios/Artistas/artistas.service';
 
 @Component({
   selector: 'app-artista',
@@ -10,9 +16,25 @@ import { Location } from '@angular/common';
 })
 export class ArtistaComponent implements OnInit {
 
-  constructor(private location: Location) { }
+  artists: Artist[];
+
+
+  private id: string;
+
+  constructor(private location: Location,private router: Router,private _Artistas:ArtistasService) { 
+   
+    //sacar el parametro id y meterlo en un variable
+    this.id=this.router.parseUrl(this.router.url).queryParams.id;
+    console.log(this.id);
+    
+  }
 
   ngOnInit() {
+
+    this._Artistas.getArtists(this.id)
+    .subscribe(artists => this.artists = artists);
+
+
   }
 
   //activar biografia

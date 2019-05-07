@@ -20,9 +20,15 @@ export class ArtistasService {
   }
 
 
-  getArtists(): Observable<Artist[]>{
+  getArtists(id: string): Observable<Artist[]> {
     //get Artists from api server
-    return this.http.get<Artist[]>(this.resourceURL);
+    
+    if (id == null) {
+      return this.http.get<Artist[]>(this.resourceURL);
+
+    } else {
+      return this.http.get<Artist[]>(this.resourceURL + "?id=" + id);
+    }
   }
 
 

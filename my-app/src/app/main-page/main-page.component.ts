@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+
 //servicios
 import { Artist } from '../servicios/Artistas/artist';
 import{ArtistasService} from '../servicios/Artistas/artistas.service';
+
 
 @Component({
   selector: 'app-main-page',
@@ -13,10 +15,10 @@ export class MainPageComponent implements OnInit {
 
   artists: Artist[];
 
-  constructor(private _Artistas:ArtistasService) { }
+  constructor(private _Artistas:ArtistasService) {}
 
   ngOnInit() {
-    this._Artistas.getArtists()
+    this._Artistas.getArtists(null)
     .subscribe(artists => this.artists = artists);
   }
 
