@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //servicios
 import{ArtistasService} from './servicios/Artistas/artistas.service';
+import{CancionesartistasService} from './servicios/cancionesartista/cancionesartistas.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import{ArtistasService} from './servicios/Artistas/artistas.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ArtistasService],
+  providers: [ArtistasService,CancionesartistasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,9 +6,11 @@ import { Location } from '@angular/common';
 
 
 //serbicios
+import { Canart } from '../servicios/cancionesartista/Canart';
+import{CancionesartistasService} from '../servicios/cancionesartista/cancionesartistas.service';
+
 import { Artist } from '../servicios/Artistas/artist';
 import{ArtistasService} from '../servicios/Artistas/artistas.service';
-
 @Component({
   selector: 'app-artista',
   templateUrl: './artista.component.html',
@@ -16,12 +18,13 @@ import{ArtistasService} from '../servicios/Artistas/artistas.service';
 })
 export class ArtistaComponent implements OnInit {
 
+  canart: Canart[];
   artists: Artist[];
 
 
   private id: string;
 
-  constructor(private location: Location,private router: Router,private _Artistas:ArtistasService) { 
+  constructor(private location: Location,private router: Router,private _Canartist:CancionesartistasService,private _Artistas:ArtistasService) { 
    
     //sacar el parametro id y meterlo en un variable
     this.id=this.router.parseUrl(this.router.url).queryParams.id;
@@ -30,6 +33,9 @@ export class ArtistaComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this._Canartist.getArtists(this.id)
+    .subscribe(artists => this.canart = artists);
 
     this._Artistas.getArtists(this.id)
     .subscribe(artists => this.artists = artists);

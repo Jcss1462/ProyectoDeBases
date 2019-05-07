@@ -31,7 +31,7 @@
             </div>
             <div id="listaArista" class="lista">
 
-                <div *ngFor="let artist of artists" id=artist class=item [routerLink]="['/artista']" [queryParams]="{ id: artist.id }">
+                <div *ngFor="let artist of artists" id={{artist.nombre}} class=item [routerLink]="['/artista']" [queryParams]="{ id: artist.id }">
                    {{artist.nombre}}
                 </div>
                 

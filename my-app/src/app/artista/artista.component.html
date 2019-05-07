@@ -9,9 +9,18 @@
     </div>
 
     <!--nombre-->
-    <div *ngFor="let artist of artists" id="nombre">
-      {{artist.nombre}}
+    <div id="nombre">
+
+      <div *ngFor="let artist of artists" id={{artist.nombre}}>
+        {{artist.nombre}}
+        <br>
+
+        {{artist.genero}}
+
+      </div>
     </div>
+
+
 
 
 
@@ -26,9 +35,10 @@
         </div>
         <div id="listabiografia" class="lista">
 
+          <p>{{artists[0].biografia}}</p>
 
           <div *ngFor="let artist of artists">
-            <p>{{artist.biografia}}</p>
+            <p>{{artists.biografia}}</p>
           </div>
 
         </div>
@@ -57,18 +67,11 @@
           Canciones
         </div>
         <div id="listaCanciones" class="lista">
-
-          <div id="The climbe" class="item">
-            The climb
-          </div>
-
-          <div id="Your always find a way back home" class="item">
-            Your always find a way back home
-          </div>
-
-          <div id="Lets get crazy" class="item">
-            Lets get crazy
-          </div>
+          <!----
+          <div *ngFor="let key of canart" id={{key.titulo}} class=item [routerLink]="['/artista']" [queryParams]="{ id: artist.id }">
+            {{key.titulo}}
+         </div>
+         -->
 
         </div>
       </div>
