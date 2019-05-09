@@ -150,10 +150,17 @@ header{
 .lista.active{
 
     height: 86%;
-    background: gray;
     overflow-y: auto;
     font-size: 20px; 
 
+}
+
+.lista.biografica.active{
+
+    height: 86%;
+    background: gray;
+    overflow-y: auto;
+    font-size: 20px; 
 }
 .lista  p{
 

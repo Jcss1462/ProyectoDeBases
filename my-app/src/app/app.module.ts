@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 //servicios
 import{ArtistasService} from './servicios/Artistas/artistas.service';
 import{CancionesartistasService} from './servicios/cancionesartista/cancionesartistas.service';
+import{AlbumesartistaService} from './servicios/albumesartista/albumesartista.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import{CancionesartistasService} from './servicios/cancionesartista/cancionesart
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ArtistasService,CancionesartistasService],
+  providers: [ArtistasService,CancionesartistasService,AlbumesartistaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

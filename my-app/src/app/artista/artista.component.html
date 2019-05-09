@@ -11,6 +11,7 @@
     <!--nombre-->
     <div id="nombre">
 
+
       <div *ngFor="let artist of artists" id={{artist.nombre}}>
         {{artist.nombre}}
         <br>
@@ -33,12 +34,10 @@
         <div id="biografia" class="activador" (click)="activarBiografia()">
           Biografia
         </div>
-        <div id="listabiografia" class="lista">
-
-          <p>{{artists[0].biografia}}</p>
+        <div id="listabiografia" class="lista biografica">
 
           <div *ngFor="let artist of artists">
-            <p>{{artists.biografia}}</p>
+            <p>{{artist.biografia}}</p>
           </div>
 
         </div>
@@ -73,27 +72,26 @@
          </div>
          -->
 
+          <div *ngFor="let key of canart" id={{key.titulo}} class=item>
+            <p>{{key.titulo}}</p>
+          </div>
+
         </div>
       </div>
 
       <!--Albums-->
       <div class="desplegable">
+
+
         <div id="Albumes" class="activador" (click)="activarAlbum()">
           Albums
         </div>
         <div id="listaAlbums" class="lista">
 
-          <div id="The climbe" class="item">
-            HM the movie
+          <div *ngFor="let key of albart" id={{key.nombre_album}} class=item>
+            <p>{{key.nombre_album}}</p>
           </div>
 
-          <div id="Miley Cyrus" class="item">
-            Miley Cyrus
-          </div>
-
-          <div id="Lets get crazy" class="item">
-            Lets get crazy
-          </div>
 
         </div>
       </div>

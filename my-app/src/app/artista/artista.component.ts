@@ -11,6 +11,9 @@ import{CancionesartistasService} from '../servicios/cancionesartista/cancionesar
 
 import { Artist } from '../servicios/Artistas/artist';
 import{ArtistasService} from '../servicios/Artistas/artistas.service';
+
+import { Albart } from '../servicios/albumesartista/Albart';
+import{AlbumesartistaService} from '../servicios/albumesartista/albumesartista.service';
 @Component({
   selector: 'app-artista',
   templateUrl: './artista.component.html',
@@ -20,11 +23,12 @@ export class ArtistaComponent implements OnInit {
 
   canart: Canart[];
   artists: Artist[];
+  albart: Albart[];
 
 
   private id: string;
 
-  constructor(private location: Location,private router: Router,private _Canartist:CancionesartistasService,private _Artistas:ArtistasService) { 
+  constructor(private location: Location,private router: Router,private _Albart:AlbumesartistaService,private _Canartist:CancionesartistasService,private _Artistas:ArtistasService) { 
    
     //sacar el parametro id y meterlo en un variable
     this.id=this.router.parseUrl(this.router.url).queryParams.id;
@@ -40,6 +44,10 @@ export class ArtistaComponent implements OnInit {
     this._Artistas.getArtists(this.id)
     .subscribe(artists => this.artists = artists);
 
+    this._Albart.getArtists(this.id)
+    .subscribe(artists => this.albart = artists);
+
+    
 
   }
 
@@ -47,6 +55,7 @@ export class ArtistaComponent implements OnInit {
   activarBiografia(): void {
     let activador = document.getElementById("listabiografia");
     activador.classList.toggle('active');
+    console.log(this.albart);
   }
 
 
